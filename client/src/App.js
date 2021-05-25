@@ -15,7 +15,7 @@ function App() {
           <Main />
         </Route>
 
-        <Route path="/details">
+        <Route path="/details/:id">
           <Details />
         </Route>
 

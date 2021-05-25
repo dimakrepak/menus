@@ -6,6 +6,6 @@ router
     .post('/create', restController.createRest)
     .put('/update/:id/:menu/:dish', restController.updateMenu)
     .get('/getAll', restController.getRests)
-    .get('/getAll/:id', restController.getRest)
+    .get('/getRest/:id', restController.getRest)
 
 module.exports = router;

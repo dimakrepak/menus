@@ -23,7 +23,7 @@ const getRest = async (req, res) => {
         if (!restaurant) {
             res.status(404).send('wrong id')
         } else {
-            res.status(200).send(post)
+            res.status(200).send(restaurant)
         }
     } catch (err) {
         res.status(500).send(err)

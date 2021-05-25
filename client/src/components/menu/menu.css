@@ -1,0 +1,27 @@
+.menu {
+  height: 500px;
+  width: 400px;
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.menu-wrapper {
+  margin-top: 5px;
+  width: 100%;
+}
+.dishes {
+  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-flow: column;
+}
+.menu-list {
+  margin: 5px 0;
+}
