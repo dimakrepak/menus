@@ -15,11 +15,11 @@ function App() {
           <Main />
         </Route>
 
-        <Route path="/details/:id">
+        <Route path="/details/:id/:user">
           <Details />
         </Route>
 
-        <Route path="/edit">
+        <Route path="/edit/:id">
           <Edit />
         </Route>
 

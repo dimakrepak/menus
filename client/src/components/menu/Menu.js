@@ -1,9 +1,11 @@
 import './menu.css';
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import axios from 'axios';
 
-export default function Menu({ id }) {
+export default function Menu({ id, admin }) {
     const [restaurant, setRestaurant] = useState(null);
+    const history = useHistory();
 
     const fetchRestaurant = async () => {
         try {
@@ -38,6 +40,9 @@ export default function Menu({ id }) {
                 </div>
 
             ))}
+            {admin &&
+                <button className="btn" onClick={() => { history.push(`/edit/${restaurant._id}`) }}>Edit</button>
+            }
         </div>
     )
 }

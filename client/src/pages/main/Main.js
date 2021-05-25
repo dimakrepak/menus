@@ -25,7 +25,7 @@ export default function Main() {
             <Navbar />
             <div className="main-container">
                 {restaurants.map(restaurant => (
-                    <Link className="router-link" key={restaurant._id} to={`/details/${restaurant._id}`}>
+                    <Link className="router-link" key={restaurant._id} to={`/details/${restaurant._id}/customer`}>
                         <Card
                             res={restaurant}
                         />

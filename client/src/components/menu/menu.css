@@ -10,6 +10,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: space-between;
 }
 .menu-wrapper {
   margin-top: 5px;
@@ -24,4 +25,10 @@
 }
 .menu-list {
   margin: 5px 0;
+}
+.btn {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
 }
