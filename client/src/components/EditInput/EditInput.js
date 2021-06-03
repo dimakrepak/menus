@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
+import './editInput.css';
+import { useState } from 'react';
 import axios from 'axios';
 
 export default function EditInput({ dish, menuId, restId }) {
@@ -42,7 +42,7 @@ export default function EditInput({ dish, menuId, restId }) {
                 name={'price'}
                 onChange={handleEditChange}
             />
-            <button onClick={handleSubmitClick}>Submit</button>
+            <button className="btn-submit" onClick={handleSubmitClick}>Submit</button>
         </div >
     )
 }

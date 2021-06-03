@@ -1,7 +1,12 @@
 const restaurantModel = require('../models/restaurant.model');
+const slugify = require('slugify');
 
 const createRest = async (req, res) => {
-    const restaurant = new restaurantModel(req.body);
+    const restaurant = new restaurantModel({
+        ...req.body,
+        slug: slugify(req.body.name)
+    });
+
     try {
         await restaurant.save();
         res.status(201).send(restaurant)
@@ -19,7 +24,7 @@ const getRests = async (req, res) => {
 }
 const getRest = async (req, res) => {
     try {
-        const restaurant = await restaurantModel.findById(req.params.id);
+        const restaurant = await restaurantModel.findOne({ slug: req.params.slug });
         if (!restaurant) {
             res.status(404).send('wrong id')
         } else {

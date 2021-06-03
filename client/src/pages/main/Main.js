@@ -5,7 +5,7 @@ import axios from 'axios';
 import './main.css';
 import { Link } from "react-router-dom";
 
-export default function Main() {
+export default function Main({ customer }) {
     const [restaurants, setRestaurants] = useState([]);
 
     const fetchRestaurants = async () => {
@@ -22,10 +22,10 @@ export default function Main() {
     }, [])
     return (
         <>
-            <Navbar />
+            <Navbar customer={customer} />
             <div className="main-container">
                 {restaurants.map(restaurant => (
-                    <Link className="router-link" key={restaurant._id} to={`/details/${restaurant._id}/customer`}>
+                    <Link className="router-link" key={restaurant._id} to={`/details/${restaurant.slug}/customer`}>
                         <Card
                             res={restaurant}
                         />
